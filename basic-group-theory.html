@@ -19,11 +19,38 @@
 
 <body style="background-color:#fdfdfd; margin:0;">
 <div style="max-width:800px; margin:60px auto; padding:20px; font-family: Georgia, serif; line-height:1.6;">
+<style>
+.box {
+  border-left: 4px solid #444;
+  padding: 10px 15px;
+  margin: 20px 0;
+  background: #f9f9f9;
+}
 
+.definition {
+  border-left-color: #2c3e50;
+}
+
+.theorem {
+  border-left-color: #000;
+  font-style: italic;
+}
+
+.proof {
+  background: #fff;
+  border-left-color: #888;
+  font-style: normal;
+}
+
+.label {
+  font-weight: bold;
+  font-style: normal;
+}
+</style>
   <h1>Basic Group Theory</h1>
 
   <p>
-  This chapter develops the foundational notions of group theory.
+  This chapter develops the foundational notions of group theory. We assume familiarity with the basic properties of the set of complex numbers $\mathbb C$, and its subsets $\mathbb N$, $\mathbb Z$, $\mathbb Q$ and $\mathbb R$.
   </p>
 
   <hr>
@@ -35,7 +62,16 @@
   <h2>Section 1</h2>
 
   <p>
-  <!-- Start writing here -->
+  Our central motivation from this chapter arises from the set of all functions whose domain and codomain is a given set $S$. Suppose that $S$ is any nonempty set and $f,g:S\to S$ are functions. Then it is well known that the composition $f\circ g$ is also a function with domain $S$ and codomain $S$. This is an example of a binary operation on a set. 
+  </p>
+
+  <div class="box definition">
+  <span class="label">Definition 1.1.</span>
+  A binary operation on a nonempty set $S$ is a function $\circ:G\times G\to G$
+  </div>
+
+  <p>
+  If $S$ is any nonempty set and $M(S)$ is the set of all functions $f:S\to S$ then function composition is a binary operation on $M(S)$. Other examples of binary operations are addition and multiplication on $\mathbb N$, $\mathbb Z$, $\mathbb Q$, $\mathbb R$, and $\mathbb C$. Subtraction is a binary operation on $\mathbb Z$, $\mathbb Q$, $\mathbb R$, and $\mathbb C$.   
   </p>
 
   $$ 

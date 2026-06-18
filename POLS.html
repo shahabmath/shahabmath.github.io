@@ -1,0 +1,284 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Bijection Between Mutually Orthogonal and Mutually Pseudo Orthogonal Latin Squares</title>
+
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$','$$']]
+  }
+};
+</script>
+
+<script async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<style>
+body {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.author {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.abstract {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #fafafa;
+    margin-bottom: 30px;
+}
+
+.theorem,
+.definition,
+.corollary {
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-left: 4px solid #444;
+    background: #f9f9f9;
+}
+
+.proof {
+    margin: 20px 0;
+}
+
+.references {
+    margin-top: 40px;
+}
+
+.references li {
+    margin-bottom: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>
+A Bijection Between Mutually Orthogonal and Mutually Pseudo Orthogonal Latin Squares
+</h1>
+
+<div class="author">
+Shahab Faruqi<br>
+Department of Mathematics<br>
+National Defence Academy<br>
+Pune 411023, India<br>
+<a href="mailto:shahabfaruqi@gmail.com">
+shahabfaruqi@gmail.com
+</a>
+</div>
+
+<div class="abstract">
+<b>Abstract.</b>
+We establish an explicit bijection between ordered families of mutually
+orthogonal Latin squares and ordered families of mutually pseudo-orthogonal
+Latin squares of the same order. As a consequence, the existence of
+$m$ mutually orthogonal Latin squares of order $n$ is equivalent to the
+existence of $m$ mutually pseudo-orthogonal Latin squares of order $n$.
+</div>
+
+<h2>1. Introduction</h2>
+
+<p>
+A <b>Latin square</b> of order $n$ is an $n\times n$ array
+$L=(L(i,j))$ on the symbol set $S$, where $|S|=n$, such that every symbol
+$s\in S$ occurs exactly once in each row and exactly once in each column.
+Throughout this paper,
+$[n]=\{1,2,\ldots,n\}$.
+Two Latin squares $P,Q$ of order $n$ are said to be
+<b>orthogonal</b> if the ordered pairs
+$(P(i,j),Q(i,j))$
+are all distinct as $(i,j)$ ranges over $[n]^2$.
+A family of Latin squares is called a family of mutually orthogonal Latin
+squares (MOLS) if every pair of Latin squares in the family is orthogonal.
+</p>
+
+<div class="definition">
+<b>Definition.</b>
+Two Latin squares $A,B$ of order $n$ are said to be
+<b>pseudo orthogonal</b> if for every $(i,j)\in[n]^2$
+there exists a $k\in[n]$ such that
+
+$$
+A(i,k)=B(j,k).
+$$
+
+A family of Latin squares is called a family of pseudo orthogonal Latin
+squares (POLS) if every pair of Latin squares in the family is pseudo
+orthogonal. By [2, Lemma 1], the column $k$ is necessarily unique.
+</div>
+
+<p>
+POLS were introduced in [1]. The equivalence between the existence of a
+family of $m$ POLS and a family of $m$ MOLS follows indirectly from
+Theorem 1 of [2]. The purpose of the present note is to exhibit a direct
+bijection between ordered families of $m$ POLS and ordered families of
+$m$ MOLS.
+</p>
+
+<h2>2. The Main Theorem</h2>
+
+<div class="theorem">
+<b>Theorem.</b>
+
+Fix integers $n\ge1$ and $m\ge2$.
+Let $\mathcal{M}$ denote the set of all ordered $m$-tuples of mutually
+orthogonal Latin squares of order $n$, and let $\mathcal{P}$ denote the set
+of all ordered $m$-tuples of mutually pseudo orthogonal Latin squares of
+order $n$.
+
+For each $t\in\{1,\ldots,m\}$, let $L_t$ and $M_t$ be $n\times n$ arrays
+related by
+
+$$
+M_t(a,i)=j
+\quad\text{if and only if}\quad
+L_t(i,j)=a.
+$$
+
+Define
+
+$$
+f:\mathcal{M}\longrightarrow\mathcal{P}
+$$
+
+by
+
+$$
+f(L_1,\ldots,L_m)=(M_1,\ldots,M_m).
+$$
+
+Then $f$ is a bijection.
+</div>
+
+<div class="proof">
+<b>Proof.</b>
+
+<p>
+Let $(L_1,\ldots,L_m)\in\mathcal M$. For each $t$, since every symbol
+occurs exactly once in every row and column of $L_t$, it follows
+immediately that $M_t$ is a Latin square.
+</p>
+
+<p>
+Now let $r\neq s$ and fix rows $a$ and $b$ of $M_r$ and $M_s$.
+Then
+$M_r(a,i)=M_s(b,i)=j$
+if and only if
+$L_r(i,j)=a$
+and
+$L_s(i,j)=b$.
+Thus solutions of
+$M_r(a,i)=M_s(b,i)$
+are in one-to-one correspondence with occurrences of the ordered pair
+$(a,b)$ in the superposition of $L_r$ and $L_s$.
+Since $L_r$ and $L_s$ are orthogonal, the ordered pair $(a,b)$ occurs
+exactly once.
+Hence $M_r$ and $M_s$ are pseudo orthogonal.
+Therefore
+$(M_1,\ldots,M_m)\in\mathcal P$.
+</p>
+
+<p>
+Conversely, let
+$(M_1,\ldots,M_m)\in\mathcal P$.
+Again, it follows immediately that each $L_t$ is a Latin square.
+Let $r\neq s$ and fix an ordered pair $(a,b)$.
+Then
+$L_r(i,j)=a$ and $L_s(i,j)=b$
+if and only if
+$M_r(a,i)=M_s(b,i)=j$.
+Thus occurrences of the ordered pair $(a,b)$ in the superposition of
+$L_r$ and $L_s$ are in one-to-one correspondence with solutions of
+$M_r(a,i)=M_s(b,i)$.
+Since $M_r$ and $M_s$ are pseudo orthogonal, there exists a solution.
+By [2, Lemma 1], this solution is unique.
+Hence $L_r$ and $L_s$ are orthogonal.
+Therefore
+$(L_1,\ldots,L_m)\in\mathcal M$.
+</p>
+
+<p>
+The correspondence is clearly its own inverse.
+Hence it defines a bijection between
+$\mathcal M$
+and
+$\mathcal P$.
+</p>
+
+&#9633;
+</div>
+
+<div class="corollary">
+<b>Corollary.</b>
+
+For every $n$ and $m$, there exist $m$ mutually orthogonal Latin squares
+of order $n$ if and only if there exist $m$ mutually pseudo-orthogonal
+Latin squares of order $n$.
+</div>
+
+<div class="proof">
+<b>Proof.</b>
+
+Since $f$ is a bijection between
+$\mathcal M$
+and
+$\mathcal P$,
+the set
+$\mathcal M$
+is nonempty if and only if the set
+$\mathcal P$
+is nonempty.
+
+&#9633;
+</div>
+
+<h2>Acknowledgement</h2>
+
+<p>
+This note originated during a series of mathematical discussions with
+ChatGPT (OpenAI). The author is grateful for its assistance in exploring
+proof strategies, refining arguments, and preparing the manuscript.
+</p>
+
+<div class="references">
+<h2>References</h2>
+
+<ol>
+<li>
+N. S. Bolshakova,
+<i>The intersection number of complete r-partite graphs</i>,
+Discrete Math. Appl. 18 (2008), 187–197.
+</li>
+
+<li>
+S. Faruqi, S. A. Katre and M. Garg,
+<i>Pseudo orthogonal Latin squares</i>,
+Discrete Math. Appl. 31 (2021), 5–17.
+</li>
+</ol>
+</div>
+
+</body>
+</html>
+```
